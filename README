@@ -3,7 +3,7 @@ A Simple Text Mining Tool for Analyzing Research Paper Abstracts
 
 Description:
 This project is a text mining tool using search results from National Center for
-Biotechnology Information's (NCBI) database (http://www.ncbi.nlm.nih.gov/pubmed).
+Biotechnology Information's database (http://www.ncbi.nlm.nih.gov/pubmed).
 It uses Perl and Python for text processing and statistic analysis.
 
 Modules and files:
@@ -26,7 +26,8 @@ keywords.txt          -- keywords provided by user
 stemFunction.pl       -- core stem function; Porter stemmer
 dict.py               -- take stemDict.txt as input; eliminate stop words and
                          proceed simple statistic
-static_words.txt      -- stemmed words and their frequencies; generate by dict.py
+static_words.txt      -- stemmed words and their frequencies; generate by
+                         dict.py
 
 HOWTO:
 1. Make a search on http://www.ncbi.nlm.nih.gov/pubmed.
@@ -49,9 +50,6 @@ cpan[2]> install Unicode:Normalize
 #quit cpan shell
 cpan[3]> exit
 #DONE
-
-Author:
-Lu Shengliang (lushl9301@gmail.com)
 
 LICENSE:
 See LICENSE

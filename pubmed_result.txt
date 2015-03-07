@@ -1,0 +1,169 @@
+PMID- 25665127
+OWN - NLM
+STAT- In-Data-Review
+DA  - 20150210
+LR  - 20150219
+IS  - 1932-6203 (Electronic)
+IS  - 1932-6203 (Linking)
+VI  - 10
+IP  - 2
+DP  - 2015
+TI  - Knowledge Retrieval from PubMed Abstracts and Electronic Medical Records with the
+      Multiple Sclerosis Ontology.
+PG  - e0116718
+LID - 10.1371/journal.pone.0116718 [doi]
+AB  - BACKGROUND: In order to retrieve useful information from scientific literature
+      and electronic medical records (EMR) we developed an ontology specific for
+      Multiple Sclerosis (MS). METHODS: The MS Ontology was created using scientific
+      literature and expert review under the Protege OWL environment. We developed a
+      dictionary with semantic synonyms and translations to different languages for
+      mining EMR. The MS Ontology was integrated with other ontologies and dictionaries
+      (diseases/comorbidities, gene/protein, pathways, drug) into the text-mining tool 
+      SCAIView. We analyzed the EMRs from 624 patients with MS using the MS ontology
+      dictionary in order to identify drug usage and comorbidities in MS. Testing
+      competency questions and functional evaluation using F statistics further
+      validated the usefulness of MS ontology. RESULTS: Validation of the lexicalized
+      ontology by means of named entity recognition-based methods showed an adequate
+      performance (F score = 0.73). The MS Ontology retrieved 80% of the genes
+      associated with MS from scientific abstracts and identified additional pathways
+      targeted by approved disease-modifying drugs (e.g. apoptosis pathways associated 
+      with mitoxantrone, rituximab and fingolimod). The analysis of the EMR from
+      patients with MS identified current usage of disease modifying drugs and
+      symptomatic therapy as well as comorbidities, which are in agreement with recent 
+      reports. CONCLUSION: The MS Ontology provides a semantic framework that is able
+      to automatically extract information from both scientific literature and EMR from
+      patients with MS, revealing new pathogenesis insights as well as new clinical
+      information.
+FAU - Malhotra, Ashutosh
+AU  - Malhotra A
+AD  - Department of Bioinformatics, Fraunhofer Institute for Algorithms and Scientific 
+      Computing, 53754, Sankt Augustin, Germany.
+FAU - Gundel, Michaela
+AU  - Gundel M
+AD  - Department of Bioinformatics, Fraunhofer Institute for Algorithms and Scientific 
+      Computing, 53754, Sankt Augustin, Germany.
+FAU - Rajput, Abdul Mateen
+AU  - Rajput AM
+AD  - Merck KGaA, Darmstadt, Germany.
+FAU - Mevissen, Heinz-Theodor
+AU  - Mevissen HT
+AD  - Department of Bioinformatics, Fraunhofer Institute for Algorithms and Scientific 
+      Computing, 53754, Sankt Augustin, Germany.
+FAU - Saiz, Albert
+AU  - Saiz A
+AD  - MS Center, Department of Neurology, Hospital Clinic of Barcelona, Barcelona,
+      Spain; Center of Neuroimmunology, Institut d'investigacions Biomediques August Pi
+      i Sunyer (IDIBAPS), Barcelona, Spain.
+FAU - Pastor, Xavier
+AU  - Pastor X
+AD  - Department of Medical Informatics, Hospital Clinic of Barcelona-University of
+      Barcelona, Barcelona, Spain.
+FAU - Lozano-Rubi, Raimundo
+AU  - Lozano-Rubi R
+AD  - Department of Medical Informatics, Hospital Clinic of Barcelona-University of
+      Barcelona, Barcelona, Spain.
+FAU - Martinez-Lapsicina, Elena H
+AU  - Martinez-Lapsicina EH
+AD  - Center of Neuroimmunology, Institut d'investigacions Biomediques August Pi i
+      Sunyer (IDIBAPS), Barcelona, Spain.
+FAU - Zubizarreta, Irati
+AU  - Zubizarreta I
+AD  - Center of Neuroimmunology, Institut d'investigacions Biomediques August Pi i
+      Sunyer (IDIBAPS), Barcelona, Spain.
+FAU - Mueller, Bernd
+AU  - Mueller B
+AD  - Department of Bioinformatics, Fraunhofer Institute for Algorithms and Scientific 
+      Computing, 53754, Sankt Augustin, Germany.
+FAU - Kotelnikova, Ekaterina
+AU  - Kotelnikova E
+AD  - Center of Neuroimmunology, Institut d'investigacions Biomediques August Pi i
+      Sunyer (IDIBAPS), Barcelona, Spain.
+FAU - Toldo, Luca
+AU  - Toldo L
+AD  - Merck KGaA, Darmstadt, Germany.
+FAU - Hofmann-Apitius, Martin
+AU  - Hofmann-Apitius M
+AD  - Department of Bioinformatics, Fraunhofer Institute for Algorithms and Scientific 
+      Computing, 53754, Sankt Augustin, Germany.
+FAU - Villoslada, Pablo
+AU  - Villoslada P
+AD  - Center of Neuroimmunology, Institut d'investigacions Biomediques August Pi i
+      Sunyer (IDIBAPS), Barcelona, Spain.
+LA  - eng
+PT  - Journal Article
+DEP - 20150209
+PL  - United States
+TA  - PLoS One
+JT  - PloS one
+JID - 101285081
+SB  - IM
+PMC - PMC4321837
+OID - NLM: PMC4321837
+EDAT- 2015/02/11 06:00
+MHDA- 2015/02/11 06:00
+CRDT- 2015/02/10 06:00
+PHST- 2015 [ecollection]
+PHST- 2014/05/18 [received]
+PHST- 2014/12/13 [accepted]
+PHST- 2015/02/09 [epublish]
+AID - 10.1371/journal.pone.0116718 [doi]
+AID - PONE-D-14-22133 [pii]
+PST - epublish
+SO  - PLoS One. 2015 Feb 9;10(2):e0116718. doi: 10.1371/journal.pone.0116718.
+      eCollection 2015.
+
+PMID- 25663561
+OWN - NLM
+STAT- Publisher
+DA  - 20150209
+LR  - 20150211
+IS  - 1612-4790 (Electronic)
+DP  - 2015 Feb 7
+TI  - How different spatial representations interact in virtual environments: the role 
+      of mental frame syncing.
+AB  - This experiment is aimed at understanding how egocentric experiences, allocentric
+      viewpoint-dependent representations, and allocentric viewpoint-independent
+      representations interact when encoding and retrieving a spatial environment.
+      Although several cognitive theories have highlighted the interaction between
+      reference frames, it is less clear about the role of a real-time presentation of 
+      allocentric viewpoint-dependent representation on the spatial organization of
+      information. Sixty participants were asked to navigate in two virtual cities to
+      memorize the position of one hidden object. Half of the participants had the
+      possibility to visualize the virtual city with an interactive aerial view. Then, 
+      they were required to find the position of the object in three different
+      experimental conditions ("retrieval with an interactive aerial view" vs.
+      "retrieval on a map" vs. "retrieval without an interactive aerial view"). Results
+      revealed that participants were significantly more precise in retrieving the
+      position of the object when immersed in an egocentric experience with the
+      interactive aerial view. The retrieval of spatial information is facilitated by
+      the presence of the interactive aerial view of the city, since it provides a
+      real-time allocentric viewpoint-dependent representation. More participants with 
+      high preference for using cardinal points tend to be more accurate when they were
+      asked to retrieve the position of the object on the map. As suggested by the
+      mental frame syncing hypothesis, the presence of an allocentric
+      viewpoint-dependent representation during the retrieval seems to ease the
+      imposition on a specific viewpoint on the stored abstract allocentric
+      viewpoint-independent representation. Our findings represent another significant 
+      step toward the comprehension of the organization of spatial representations of
+      our environment.
+FAU - Serino, Silvia
+AU  - Serino S
+AD  - Applied Technology for Neuro-Psychology Lab, IRCCS Istituto Auxologico Italiano, 
+      Via Magnasco, 2, 20149, Milan, MI, Italy, s.serino@auxologico.it.
+FAU - Riva, Giuseppe
+AU  - Riva G
+LA  - ENG
+PT  - JOURNAL ARTICLE
+DEP - 20150207
+TA  - Cogn Process
+JT  - Cognitive processing
+JID - 101177984
+EDAT- 2015/02/11 06:00
+MHDA- 2015/02/11 06:00
+CRDT- 2015/02/10 06:00
+PHST- 2014/07/24 [received]
+PHST- 2015/01/28 [accepted]
+PHST- 2015/02/07 [aheadofprint]
+AID - 10.1007/s10339-015-0646-4 [doi]
+PST - aheadofprint
+SO  - Cogn Process. 2015 Feb 7.

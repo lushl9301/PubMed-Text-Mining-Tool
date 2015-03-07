@@ -1,0 +1,8 @@
+Text
+Mining
+#this key word will be ignore
+#instead of write
+#Text Mining
+#please write as above
+#leave a newline in the end
+

@@ -16,6 +16,7 @@ $filename = "[2]stemmedSentence.txt";
 open FILE, "<:encoding(utf-8)", $filename or die "can't find file ".$filename;
 
 open ($output, '>', "[3]results.txt");
+open ($PMIDList, '>', "[3]pmidList.txt");
 
 while ($readinline = <FILE>) {
     if ($readinline =~ /^\n/) {
@@ -41,6 +42,7 @@ while ($readinline = <FILE>) {
     }
     if ($numOfSen > 0) {
         print $output "$PMID" . $useful . "\n";
+        print $PMIDList "$PMID";
     }
 }
 close $output or die "can't close file";

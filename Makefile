@@ -18,6 +18,7 @@ all:
 
 	@echo [3] Use stemmed keywords to select useful sentences.
 	@echo     Results are stored in results.txt
+	@echo     PMID are listed in pmidList.txt
 	perl selectSentence.pl
 	@echo ==============================================================
 	@echo
@@ -30,8 +31,12 @@ all:
 	@echo
 
 	@echo Process done. Please conduct further analysis manually.
+	@echo You can generate PMID HTML list by typing \"make html\".
 
+html:
+	@echo [*]Use generated PMID list for creating an html file for easy access.
+	python htmlGenerator.py
 
 
 clean:
-	$(RM) [1]myFormat.txt [2]stemDict.txt [2]stemmedSentence.txt [3]results.txt [4]static_words.txt
+	$(RM) [1]myFormat.txt [2]stemDict.txt [2]stemmedSentence.txt [3]results.txt [3]pmidList.txt [4]static_words.txt

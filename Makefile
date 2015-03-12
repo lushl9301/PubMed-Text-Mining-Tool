@@ -35,7 +35,7 @@ all:
 
 html:
 	@echo [*]Use generated PMID list for creating an html file for easy access.
-	python htmlGenerator.py
+	python htmlGenerator.py > PMIDList.html
 
 
 clean:

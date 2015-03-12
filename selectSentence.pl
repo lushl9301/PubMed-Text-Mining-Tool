@@ -23,6 +23,8 @@ while ($readinline = <FILE>) {
         next;
     }
     $PMID = $readinline;
+    chomp($PMID);
+    $title = <FILE>;
     $useful = "";
     $numOfSen = 0;
     while ($readinline = <FILE>) {
@@ -41,8 +43,8 @@ while ($readinline = <FILE>) {
         }
     }
     if ($numOfSen > 0) {
-        print $output "$PMID" . $useful . "\n";
-        print $PMIDList "$PMID";
+        print $output "$PMID\n" . $useful . "\n";
+        print $PMIDList "$PMID # $title";
     }
 }
 close $output or die "can't close file";

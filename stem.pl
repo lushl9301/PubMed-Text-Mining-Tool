@@ -13,6 +13,10 @@ while (<>) {
         print $output $_;
         $_ = <>;
     }
+    if (/^Title/) {
+    	print $output $_;
+    	$_ = <>;
+    }
     {
         /^([^a-zA-Z]*)(.*)/;
         $_ = $2;

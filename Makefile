@@ -38,7 +38,7 @@ all: .result .statistic
 	@echo ==============================================================
 	@echo
 
-html: all
+html:
 	@echo [*]Use generated PMID list for creating an html file for easy access.
 	python htmlGenerator.py > PMIDList.html
 

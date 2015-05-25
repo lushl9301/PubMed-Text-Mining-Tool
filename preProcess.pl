@@ -66,6 +66,6 @@ while ($readinline = <FILE>) {
         $counter += 1;
     }
     if ($counter > 0) {
-        print "$pmid" . "$title" . $abstractSentences . "\n";
+        print "$pmid" . "$title\n" . $abstractSentences . "\n";
     }
 }

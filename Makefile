@@ -37,11 +37,26 @@ all: .result .statistic
 	@echo You can generate PMID HTML list by typing \"make html\".
 	@echo ==============================================================
 	@echo
+	@echo Or, conduct next step analysis by typing \"make next\".
+	@echo New pubmed_result.txt will be generated.
+	@echo Current raw data and keywords will be moved into ./backup/
+	@echo ==============================================================
+	@echo
+
 
 html:
 	@echo [*]Use generated PMID list for creating an html file for easy access.
 	python htmlGenerator.py > PMIDList.html
 
+
+next:
+	@echo New pubmed_result.txt is generated based on given keyword\(s\).
+	python nextStep.py > new_pubmed_result.txt
+	$(eval TIMESTAMP = $(shell date +%Y%m%d%H%M%S))
+	mkdir -p backup
+	mv pubmed_result.txt backup/pubmed_result.txt.${TIMESTAMP}
+	cp keywords.txt backup/keywords.txt.${TIMESTAMP}
+	cp new_pubmed_result.txt pubmed_result.txt
 
 clean:
 	@$(RM) [1]myFormat.txt [2]stemDict.txt [2]stemmedSentence.txt [3]results.txt [3]pmidList.txt [4]static_words.txt

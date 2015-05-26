@@ -47,10 +47,14 @@ html:
 	@echo [*]Use generated PMID list for creating an html file for easy access.
 	python htmlGenerator.py > PMIDList.html
 
+
 next:
 	@echo New pubmed_result.txt is generated based on given keyword\(s\).
 	python nextStep.py > new_pubmed_result.txt
-	mv pubmed_result.txt pubmed_result.txt.`date +%Y%m%d%H%M%S`
+	$(eval TIMESTAMP = $(shell date +%Y%m%d%H%M%S))
+	mkdir -p backup
+	mv pubmed_result.txt backup/pubmed_result.txt.${TIMESTAMP}
+	cp keywords.txt backup/keywords.txt.${TIMESTAMP}
 	cp new_pubmed_result.txt pubmed_result.txt
 
 clean:

@@ -38,7 +38,8 @@ all: .result .statistic
 	@echo ==============================================================
 	@echo
 	@echo Or, conduct next step analysis by typing \"make next\".
-	@echo new_pubmed_result.txt will be generated.
+	@echo New pubmed_result.txt will be generated.
+	@echo Current raw data and keywords will be moved into ./backup/
 	@echo ==============================================================
 	@echo
 

@@ -50,6 +50,8 @@ html:
 next:
 	@echo New pubmed_result.txt is generated based on given keyword\(s\).
 	python nextStep.py > new_pubmed_result.txt
+	mv pubmed_result.txt pubmed_result.txt.`date +%Y%m%d%H%M%S`
+	cp new_pubmed_result.txt pubmed_result.txt
 
 clean:
 	@$(RM) [1]myFormat.txt [2]stemDict.txt [2]stemmedSentence.txt [3]results.txt [3]pmidList.txt [4]static_words.txt

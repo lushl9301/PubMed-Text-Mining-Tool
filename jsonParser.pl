@@ -8,7 +8,7 @@ require "splitFunction.pl";
 binmode(STDOUT, ":utf8");
 
 $filename = "raw_data.json";
-open FILE, "<:encoding(utf-8)", $filename or die "can't find file ".$filename;
+open FILE, "<:encoding(utf-8)", $filename or exit "can't find file ".$filename;
 while ($readinline = <FILE>) {
     if ($readinline =~ /^\n/) {
         next;

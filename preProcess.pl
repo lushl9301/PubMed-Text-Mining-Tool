@@ -2,20 +2,23 @@ use warnings;
 use Lingua::EN::Sentence qw(get_sentences);
 use Unicode::Normalize 'normalize';
 
+require "splitFunction.pl";
+
 binmode(STDOUT, ":utf8");
 
 $filename = "pubmed_result.txt";
-open FILE, "<:encoding(utf-8)", $filename or die "can't find file ".$filename;
+open FILE, "<:encoding(utf-8)", $filename or exit "can't find file ".$filename;
 while ($readinline = <FILE>) {
     if ($readinline =~ /^\n/) {
         next;
     }
-    $pmid = "";
+    $pmid = "URL- http://www.ncbi.nlm.nih.gov/pubmed/";
     $title = "Title- ";
     $abstract = "Abstract- ";
 
     #PMID
-    $pmid .= $readinline;
+    $readinline =~ /(\d+)\n/;
+    $pmid .= $1 . "\n";
 
 
     while ($readinline = <FILE>) {
@@ -57,14 +60,9 @@ while ($readinline = <FILE>) {
     if ($title =~ /Title- \[/ or $abstract =~ /^.{7,12}$/) { #if not english or no abstract, ignore
         next;
     }
-    chomp($abstract);
-    $counter = 0;
-    my $sref = get_sentences($abstract);
-    $abstractSentences = "";
-    foreach my $sentence (@$sref) {
-        $abstractSentences .= $sentence . "\n";
-        $counter += 1;
-    }
+    
+    ($counter, $abstractSentences) = _split($abstract);
+
     if ($counter > 0) {
         print "$pmid" . "$title\n" . $abstractSentences . "\n";
     }

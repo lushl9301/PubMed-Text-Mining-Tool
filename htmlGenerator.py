@@ -8,15 +8,12 @@ PMID List
 </head>
 <body>"""
 print head
-urlHead = '<a href="http://www.ncbi.nlm.nih.gov/pubmed/?term='
+urlHead = '<a href="'
 urlTail = "</h3></a>"
 for pmid in pmidList:
-    _pmid, title = pmid.split('#')
-    entry = urlHead + _pmid[6:-1] + '" target="_blank"><h3>' + _pmid[:-1] + urlTail
-    description = "<p>" + title[7:] + "</p>"
-
+    _pmid, title = pmid.split('!!')
+    entry = urlHead + _pmid[5:-1] + '" target="_blank"><h3>' + _pmid[5:-1] + urlTail
     print entry
-    print description
 
 tail = """
 </body>

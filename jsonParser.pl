@@ -14,7 +14,7 @@ while ($readinline = <FILE>) {
         next;
     }
     $result = decode_json($readinline);
-    $pmid = "PMID- 88888888\n";
+    $pmid = "URL- " . $result->{'url'} . "\n";
     $title = "Title- " . $result->{'title'};
     $abstract = "Abstract- " . $result->{'abstract'};
 

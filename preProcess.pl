@@ -12,12 +12,13 @@ while ($readinline = <FILE>) {
     if ($readinline =~ /^\n/) {
         next;
     }
-    $pmid = "";
+    $pmid = "URL- http://www.ncbi.nlm.nih.gov/pubmed/";
     $title = "Title- ";
     $abstract = "Abstract- ";
 
     #PMID
-    $pmid .= $readinline;
+    $readinline =~ /(\d+)\n/;
+    $pmid .= $1 . "\n";
 
 
     while ($readinline = <FILE>) {

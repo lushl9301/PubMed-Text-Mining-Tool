@@ -1,5 +1,4 @@
-Text
-Mining
+use
 #this key word will be ignore
 #instead of write
 #Text Mining

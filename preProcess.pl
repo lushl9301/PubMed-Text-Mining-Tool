@@ -7,17 +7,18 @@ require "splitFunction.pl";
 binmode(STDOUT, ":utf8");
 
 $filename = "pubmed_result.txt";
-open FILE, "<:encoding(utf-8)", $filename or die "can't find file ".$filename;
+open FILE, "<:encoding(utf-8)", $filename or exit "can't find file ".$filename;
 while ($readinline = <FILE>) {
     if ($readinline =~ /^\n/) {
         next;
     }
-    $pmid = "";
+    $pmid = "URL- http://www.ncbi.nlm.nih.gov/pubmed/";
     $title = "Title- ";
     $abstract = "Abstract- ";
 
     #PMID
-    $pmid .= $readinline;
+    $readinline =~ /(\d+)\n/;
+    $pmid .= $1 . "\n";
 
 
     while ($readinline = <FILE>) {

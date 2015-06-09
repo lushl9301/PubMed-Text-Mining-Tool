@@ -6,7 +6,10 @@
 	@echo ==============================================================
 	@echo
 	@echo [1] Generate the format used by stem function.
-	perl preProcess.pl > [1]myFormat.txt
+	@rm -f [1]myFormat.txt
+	@touch [1]myFormat.txt
+	perl preProcess.pl >> [1]myFormat.txt
+	perl jsonParser.pl >> [1]myFormat.txt
 	@echo ==============================================================
 	@echo
 
@@ -51,12 +54,14 @@ html:
 
 next:
 	@echo New pubmed_result.txt is generated based on given keyword\(s\).
-	python nextStep.py > new_pubmed_result.txt
+	python nextStep.py
 	$(eval TIMESTAMP = $(shell date +%Y%m%d%H%M%S))
-	mkdir -p backup
-	mv pubmed_result.txt backup/pubmed_result.txt.${TIMESTAMP}
-	cp keywords.txt backup/keywords.txt.${TIMESTAMP}
-	cp new_pubmed_result.txt pubmed_result.txt
+	@mkdir -p backup
+	@mv pubmed_result.txt backup/pubmed_result.txt.${TIMESTAMP}
+	@mv raw_data.json backup/raw_data.json.${TIMESTAMP}
+	@cp keywords.txt backup/keywords.txt.${TIMESTAMP}
+	cp .new_pubmed_result.txt pubmed_result.txt
+	cp .new_raw_data.json raw_data.json
 
 clean:
 	@$(RM) [1]myFormat.txt [2]stemDict.txt [2]stemmedSentence.txt [3]results.txt [3]pmidList.txt [4]static_words.txt

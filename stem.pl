@@ -9,7 +9,7 @@ while (<>) {
     if (/^\n/) {
         print $output "\n";
     }
-    if (/^PMID/) {
+    if (/^URL/) {
         print $output $_;
         $_ = <>;
     }

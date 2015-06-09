@@ -8,13 +8,13 @@ require "splitFunction.pl";
 binmode(STDOUT, ":utf8");
 
 $filename = "raw_data.json";
-open FILE, "<:encoding(utf-8)", $filename or die "can't find file ".$filename;
+open FILE, "<:encoding(utf-8)", $filename or exit "can't find file ".$filename;
 while ($readinline = <FILE>) {
     if ($readinline =~ /^\n/) {
         next;
     }
     $result = decode_json($readinline);
-    $pmid = "PMID- 88888888\n";
+    $pmid = "URL- " . $result->{'url'} . "\n";
     $title = "Title- " . $result->{'title'};
     $abstract = "Abstract- " . $result->{'abstract'};
 

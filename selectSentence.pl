@@ -15,8 +15,8 @@ binmode(STDOUT, ":utf8");
 $filename = "[2]stemmedSentence.txt";
 open FILE, "<:encoding(utf-8)", $filename or die "can't find file ".$filename;
 
-open ($output, '>', "[3]results.txt");
-open ($PMIDList, '>', "[3]pmidList.txt");
+open ($output, ">:encoding(utf-8)", "[3]results.txt");
+open ($PMIDList, ">:encoding(utf-8)", "[3]pmidList.txt");
 
 while ($readinline = <FILE>) {
     if ($readinline =~ /^\n/) {
@@ -44,7 +44,7 @@ while ($readinline = <FILE>) {
     }
     if ($numOfSen > 0) {
         print $output "$PMID\n" . $useful . "\n";
-        print $PMIDList "$PMID # $title";
+        print $PMIDList "$PMID !! $title";
     }
 }
 close $output or die "can't close file";

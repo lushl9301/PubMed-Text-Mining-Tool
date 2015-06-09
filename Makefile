@@ -54,7 +54,7 @@ html:
 
 next:
 	@echo New pubmed_result.txt is generated based on given keyword\(s\).
-	python nextStep.py > new_pubmed_result.txt
+	python nextStep.py
 	$(eval TIMESTAMP = $(shell date +%Y%m%d%H%M%S))
 	mkdir -p backup
 	mv pubmed_result.txt backup/pubmed_result.txt.${TIMESTAMP}

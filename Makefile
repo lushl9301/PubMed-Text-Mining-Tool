@@ -6,7 +6,7 @@
 	@echo ==============================================================
 	@echo
 	@echo [1] Generate the format used by stem function.
-	@rm -rf [1]myFormat.txt
+	@rm -f [1]myFormat.txt
 	@touch [1]myFormat.txt
 	perl preProcess.pl >> [1]myFormat.txt
 	perl jsonParser.pl >> [1]myFormat.txt

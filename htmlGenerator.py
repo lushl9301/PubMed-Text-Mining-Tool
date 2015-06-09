@@ -8,13 +8,13 @@ PMID List
 </head>
 <body>"""
 print head
-urlHead = '<a href="'
+urlHead = '<h3> #> <a href="'
 urlTail = "</h3></a>"
 for pmid in pmidList:
     _pmid, title = pmid.split('!!')
-    entry = urlHead + _pmid[5:-1] + '" target="_blank"><h3>' + _pmid[5:-1] + urlTail
-    print entry
+    entry = urlHead + _pmid[5:-1] + '" target="_blank">' + _pmid[5:-1] + urlTail
     print "<h3>" + title[7:-1] + "</h3>"
+    print entry
 
 tail = """
 </body>

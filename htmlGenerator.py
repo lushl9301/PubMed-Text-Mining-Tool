@@ -14,6 +14,7 @@ for pmid in pmidList:
     _pmid, title = pmid.split('!!')
     entry = urlHead + _pmid[5:-1] + '" target="_blank"><h3>' + _pmid[5:-1] + urlTail
     print entry
+    print "<h3>" + title[7:-1] + "</h3>"
 
 tail = """
 </body>

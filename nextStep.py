@@ -1,3 +1,8 @@
+# generate
+# .new_pubmed_result.txt
+# .new_raw_data.json
+# for next step
+
 import json
 
 pmidList = "".join(open("[3]pmidList.txt", 'r').readlines()).split('\n')
@@ -11,7 +16,7 @@ index = 0
 length = len(urlOnlyList)
 try:
     with open("pubmed_result.txt", "r") as myFormat:
-        outputFile = open("new_pubmed_result.txt", "w")
+        outputFile = open(".new_pubmed_result.txt", "w")
         while index < length:
             content = myFormat.readline()
             if content == "":
@@ -27,7 +32,7 @@ try:
 except:
     pass
 with open("raw_data.json", "r") as myFormat:
-    outputFile = open("new_raw_data.json", "w")
+    outputFile = open(".new_raw_data.json", "w")
     while index < length:
         jsonString = myFormat.readline()
         if jsonString == "":

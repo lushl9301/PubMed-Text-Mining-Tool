@@ -55,6 +55,8 @@ HOWTO:
 1. Go to pyspider's data folder
 2. Type "sqlite3 result.db" in the command line
 3. Type "output raw_data.json", "select result from resultdb_YourProjectName;"
+   (You may want to type ".table" to check current resultdb table before
+   selecting)
 4. Type ".quit" and copy "raw_data.json" into the same directory as these
    codes.
 

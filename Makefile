@@ -9,8 +9,8 @@
 	@rm -f [1]myFormat.txt
 	@touch [1]myFormat.txt
 	python csvParser.py
-	#mv csv file in case make next
-	@mv export.csv export.csv.b
+	@mv export.csv export.csv.b 2>/dev/null; true #mv csv file in case make next
+	@rm -f temp.json
 	perl preProcess.pl >> [1]myFormat.txt
 	perl jsonParser.pl >> [1]myFormat.txt
 	@echo ==============================================================

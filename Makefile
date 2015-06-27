@@ -8,6 +8,9 @@
 	@echo [1] Generate the format used by stem function.
 	@rm -f [1]myFormat.txt
 	@touch [1]myFormat.txt
+	python csvParser.py
+	#mv csv file in case make next
+	@mv export.csv export.csv.b
 	perl preProcess.pl >> [1]myFormat.txt
 	perl jsonParser.pl >> [1]myFormat.txt
 	@echo ==============================================================

@@ -21,5 +21,5 @@ except:
     sys.exit()
 jsonFile.close()
 jsonFile = open('temp.json', "r")
-with open('111.json', "a") as dataFile:
+with open('raw_data.json', "a") as dataFile:
     dataFile.write(jsonFile.read())

@@ -3,6 +3,7 @@ import json
 
 
 jsonFile = open("raw_data.json", "a")
+jsonFile.write("\n")
 with open('export.csv') as csvFile:
     csvFile.readline()
     fieldNames = csvFile.readline().replace('\n','').split(',')

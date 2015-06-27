@@ -2,9 +2,9 @@ import csv
 import json
 import sys
 
-jsonFile = open('temp.json', "w")
 try:
     with open('export.csv') as csvFile:
+        jsonFile = open('temp.json', "w")
         csvFile.readline()
         fieldNames = csvFile.readline().replace('\n','').split(',')
         reader = csv.DictReader(csvFile, fieldNames)

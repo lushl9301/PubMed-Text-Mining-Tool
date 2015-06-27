@@ -7,11 +7,16 @@ Biotechnology Information's database (http://www.ncbi.nlm.nih.gov/pubmed).
 It uses Perl and Python for text processing and statistic analysis.
 
 Modules and files (not all):
-pubmed_result.txt     -- results downloaded from NCBI PubMed
+pubmed_result.txt     -- results downloaded from PubMed
+export.csv            -- results exported from IEEE Xplore
 raw_data.json         -- results selected from pyspider sqlite database
 keywords.txt          -- keywords provided by user
 preProcess.pl         -- take pubmed_result.txt as input;
                          make it easy for later process
+csvParser.py          -- take export.csv as input;
+                         make data into json format and append it to
+                         raw_data.json;
+                         only support IEEE Xplore format
 jsonParser.pl         -- take raw_data.json as input;
                          make data into the same format as preProcess.pl
 splitFunction.pl      -- core split function; shared by raw data parsers
@@ -58,6 +63,12 @@ HOWTO:
 4. Type ".quit" and copy "raw_data.json" into the same directory as these
    codes.
 
+==== export.csv
+1. Make a search on http://ieeexplore.ieee.org/Xplore/home.jsp
+2. Press "Export to CSV" on the right of "Download Citations".
+3. Change the file name as "export.csv" and sive it into the same directory as
+   these codes.
+
 = Use This Tool
 
 1. Type make<RETURN> in the command line; this may take several minutes, which
@@ -69,7 +80,7 @@ HOWTO:
 4. Change keywords in keywords.txt and goto step 1
 5. Revert manually according to the time stamp in backup folder if it is needed
 
-Installation (Ubuntu as example):
+= Installation (Ubuntu as example):
 #install perl, python and make.
 #you can install build-essential too.
 $sudo apt-get install perl python make

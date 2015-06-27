@@ -34,7 +34,7 @@
 .statistic: .stem dict.py [2]stemDict.txt
 	@echo [4] Process word frequency analysis.
 	@echo     Stop words are eliminated.
-	python dict.py > [4]static_words.txt
+	python dict.py > [4]stats_words.txt
 	@echo ==============================================================
 	@echo
 
@@ -67,5 +67,5 @@ next:
 	cp .new_raw_data.json raw_data.json
 
 clean:
-	@$(RM) [1]myFormat.txt [2]stemDict.txt [2]stemmedSentence.txt [3]results.txt [3]pmidList.txt [4]static_words.txt
+	@$(RM) [1]myFormat.txt [2]stemDict.txt [2]stemmedSentence.txt [3]results.txt [3]pmidList.txt [4]stats_words.txt
 	@$(RM) PMIDList.html
